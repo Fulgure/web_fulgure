@@ -15,4 +15,9 @@ class SearchPageController extends Controller
             'results' => array()
         ]);
     }
+
+    public function search_finance(Request $request)
+    {
+        return response()->json($request->query());
+    }
 }

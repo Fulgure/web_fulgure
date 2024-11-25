@@ -32,7 +32,7 @@
     <meta name="twitter:description" content="Nxtransfert envoyez jusqu'a 50 Go - Gratuit et sans inscrition - Gardez vos transfert pendant 30 jours">
     <meta name="twitter:image" content="/asset/img/logo.png">
 
-    <link rel="stylesheet" href="/asset/lib/bootstrap.css">
+    {{-- <link rel="stylesheet" href="/asset/lib/bootstrap.css"> --}}
 </head>
 <body>
     @include('partials.header')
