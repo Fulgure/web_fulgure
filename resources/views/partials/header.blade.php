@@ -1,35 +1,38 @@
 @if (isset($slimHeader) && $slimHeader == true)
 <header class="pt-5">
-    <div class="container">
-        <div classd="d-flex flex-column justify-content-center align-items-center">
-            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                <a class="col-1 d-flex justify-content-center align-items-center" href="/"><img src="/asset/img/logo.png" alt="" width="auto" style="max-width: 100px;"></a>
-                <div class="col input-group p-1">
-                    <span class="input-group-prepend">
-                        <span class="input-group-text"><i class="bi bi-search"></i></span>
-                    </span>
-                    <input class="form-control search-bar-input" type="search" name="query" id="query" placeholder="Faites votre recherche avec Fulgure" value="{{$query}}" style="max-height:38px;">
-                    <!--<div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" onclick="search_microphone()" data-user-id="" aria-label="Mic"><i class="bi bi-mic"></i></button>
-                    </div>-->
+    <div class="container mx-auto">
+        <div class="flex flex-col justify-center items-center">
+            <div class="flex flex-col md:flex-row justify-center items-center w-full">
+                <a class="flex justify-center items-center w-24" href="/">
+                    <img src="/asset/img/logo.png" alt="Logo" class="max-w-full">
+                </a>
+                <div class="flex-grow input-group p-1">
+                    <div class="relative w-full">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                            <i class="bi bi-search text-gray-400"></i>
+                        </span>
+                        <input class="form-control search-bar-input block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-300 focus:border-blue-300"
+                            type="search" name="query" id="query" placeholder="Faites votre recherche avec Fulgure" 
+                            value="{{$query}}" />
+                    </div>
                 </div>
             </div>
-            <div class="row justify-content-evenly align-items-center">
-                <a class="col-1" href="/search?q={{$query}}">
-                    <i class="bi bi-search"></i>
-                    <span>Toutes</span>
+            <div class="flex justify-evenly items-center mt-4 space-x-4 w-full">
+                <a class="flex flex-col items-center text-center text-gray-700 hover:text-blue-500" href="/search?q={{$query}}">
+                    <i class="bi bi-search text-lg"></i>
+                    <span class="text-sm">Toutes</span>
                 </a>
-                <a class="col-1" href="/search/actu?q={{$query}}">
-                    <i class="bi bi-journal-text"></i>
-                    <span>Actualités</span>
+                <a class="flex flex-col items-center text-center text-gray-700 hover:text-blue-500" href="/search/actu?q={{$query}}">
+                    <i class="bi bi-journal-text text-lg"></i>
+                    <span class="text-sm">Actualités</span>
                 </a>
-                <a class="col-1" href="/search/finance?q={{$query}}">
-                    <i class="bi bi-journal-text"></i>
-                    <span>Finance</span>
+                <a class="flex flex-col items-center text-center text-gray-700 hover:text-blue-500" href="/search/finance?q={{$query}}">
+                    <i class="bi bi-journal-text text-lg"></i>
+                    <span class="text-sm">Finance</span>
                 </a>
-                <a class="col-1" href="/search/tech?q={{$query}}">
-                    <i class="bi bi-journal-text"></i>
-                    <span>Tech</span>
+                <a class="flex flex-col items-center text-center text-gray-700 hover:text-blue-500" href="/search/tech?q={{$query}}">
+                    <i class="bi bi-journal-text text-lg"></i>
+                    <span class="text-sm">Tech</span>
                 </a>
             </div>
         </div>
