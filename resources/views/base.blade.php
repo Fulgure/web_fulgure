@@ -34,7 +34,7 @@
 
     {{-- <link rel="stylesheet" href="/asset/lib/bootstrap.css"> --}}
 </head>
-<body>
+<body class="bg-light dark:bg-[#1e1e1e] dark:text-[#f5f5f5]">
     @include('partials.header')
 
     @yield('body')
