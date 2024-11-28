@@ -2,7 +2,7 @@
 
 @section('body')
 <main>
-    <div class="container mx-auto text-center mt-10 pt-10 mb-10 pb-10">
+    <div class="container mx-auto text-center mt-10 pt-32 mb-10 pb-32">
         <div class="flex items-center justify-center">
             <img class="logo" src="/asset/img/logo.png" alt="Logo de Fulgure" class="w-20 h-auto" loading="lazy">
             <h1 class="text-4xl font-bold ml-4">FULGURE</h1>
