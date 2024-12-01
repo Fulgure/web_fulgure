@@ -15,3 +15,22 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(search);
     });
 });
+
+// Fonction pour ouvrir la modal
+window.openModal = function (modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+}
+  
+// Fonction pour fermer la modal
+window.closeModal = function(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+}
+  

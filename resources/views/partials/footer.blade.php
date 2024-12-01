@@ -1,26 +1,99 @@
-<footer class="mt-5">
+@include('modal.commentaire')
+<footer class="mt-5 py-8">
     @if (isset($slimHeader) && $slimHeader == true)
     <!-- Footer simple et léger si possible une petit ligne de 50px max de hauter -->
-    <div></div>
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Left section -->
+        <div class="flex space-x-4">
+          {{-- <div class="group relative"> 
+            <button class="hover:underline">Résultats</button>
+          </div>--}}
+          <div class="group relative">
+            <button class="hover:underline">Informations légales</button>
+          </div>
+          {{-- <div class="group relative"> 
+            <button class="hover:underline">Services</button>
+          </div>--}}
+          <div class="group relative">
+            <button class="hover:underline">À propos de Fulgure</button>
+          </div>
+        </div>
+    
+        <!-- Center section -->
+        <div>© 2024 Fulgure. Tous droits réservés.</div>
+    
+        <!-- Right section -->
+        <div>
+          <button class="text-gray-300 border border-gray-500 px-4 py-2 rounded hover:bg-gray-700">
+            Partager vos commentaires
+          </button>
+        </div>
+    </div>
     @else
         <!-- Footer avec plus d'information -->
-        <div class="container mx-auto">
-            <!-- Information général -->
-            <div class="flex flex-row">
-                <div class="col">
-                    <a class="flex justify-center items-center w-24" href="/">
-                        <img src="/asset/img/logo.png" alt="Logo" class="max-w-full">
-                    </a>
-                    <p>
-                        Fulgure, vos données sont vos données
-                    </p>
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                <!-- Left Section -->
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xl font-semibold"><img src="/asset/img/logo.png" alt="Logo de Fulgure"></span>
+                    </div>
+                    <p class="mt-2">Un moteur pour vous, pas pour vos données.</p>
+                    {{-- <button class="mt-4 bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded">Découvrir le service</button> --}}
                 </div>
-                <div class="col">
-                    
+
+                <!-- Center Section -->
+                <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-16">
+                    <div>
+                        <h3 class="font-semibold text-white">Services</h3>
+                        <ul class="mt-2 space-y-1">
+                            <li><a href="/" class="hover:underline">Search</a></li>
+                            {{-- <li><a href="maps.fulgure.fr" class="hover:underline">Maps</a></li> --}}
+                            {{-- <li><a href="#" class="hover:underline">App Android</a></li> --}}
+                            {{-- <li><a href="#" class="hover:underline">App iOS</a></li> --}}
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold text-white">À propos de Fulgure</h3>
+                        <ul class="mt-2 space-y-1">
+                            {{-- <li><a href="#" class="hover:underline">Better Web</a></li> 
+                            <li><a href="#" class="hover:underline">Nous rejoindre</a></li>
+                            <li><a href="#" class="hover:underline">Centre d'aide</a></li>--}}
+                            <li><a href="about.fulgure.fr/contact" class="hover:underline">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Section -->
+                <div>
+                    <h3 class="font-semibold text-white">Suivez-nous</h3>
+                    <div class="mt-2 flex space-x-4">
+                        <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-tiktok"></i> TikTok</a>
+                        <a href="https://www.linkedin.com/company/fulgure/" class="hover:text-white"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="#" class="hover:text-white"><i class="fab fab-discord"></i> Discord</a>
+                    </div>
                 </div>
             </div>
-            <div class="border-t-4">
-                <!-- Information légal -->
+
+            <hr class="my-6 border-gray-700">
+
+            <div class="flex flex-col md:flex-row justify-between text-sm">
+                <div class="space-y-2 md:space-y-0 md:flex md:space-x-4">
+                    <a href="#" class="hover:underline">Politique de confidentialité</a>
+                    <a href="#" class="hover:underline">Conditions d'utilisation</a>
+                    <a href="#" class="hover:underline">Mentions légales</a>
+                    {{-- <a href="#" class="hover:underline">Classement</a> --}}
+                    <a href="#" class="hover:underline">Gestion des cookies</a>
+                </div>
+
+                <p class="mt-4 md:mt-0">© 2024 Fulgure. Tous droits réservés.</p>
+
+                <button class="text-gray-300 border border-gray-500 px-4 py-2 rounded hover:bg-gray-700" onclick="openModal('commentaire-modal')" type="button">
+                    Partager vos commentaires
+                </button>
             </div>
         </div>
     @endif

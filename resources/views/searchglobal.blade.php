@@ -1,5 +1,7 @@
 @extends('base')
 
+@section('name', 'Fulgure - Résultats de recherche pour ' . $query)
+
 @section('body')
 <main class="container mt-5 mx-auto h-full min-h-screen">
     @if (!empty($results))

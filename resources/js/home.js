@@ -1,9 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const count = document.querySelector("#count_search").getAttribute("data-search-count")
-    let i = 0;
-    setInterval(() => {
-        for (let i = 0; i <= count; i++) {
-            document.querySelector("#count_search").textContent = i
+    const count = parseInt(document.querySelector("#count_search").getAttribute("data-search-count"), 10);
+    let i = 1;
+
+    const interval = setInterval(() => {
+        if (i <= count) {
+            document.querySelector("#count_search").textContent = i;
+            i++;
+        } else {
+            clearInterval(interval); // Arrête le setInterval lorsque i dépasse count
         }
-    }, 1000);
-})
+    }, 100); // Met à jour toutes les secondes
+});
