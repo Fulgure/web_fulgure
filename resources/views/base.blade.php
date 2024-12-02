@@ -40,5 +40,6 @@
     @yield('body')
 
     @include('partials.footer')
+    <script src="/asset/lib/jquery.js"></script>
 </body>
 </html>

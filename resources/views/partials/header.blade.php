@@ -11,9 +11,12 @@
                         <span class="absolute inset-y-0 left-0 flex items-center pl-3">
                             <i class="bi bi-search text-gray-400"></i>
                         </span>
-                        <input class="form-control search-bar-input block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-300 focus:border-blue-300"
-                            type="search" name="query" id="query" placeholder="Faites votre recherche avec Fulgure" 
-                            value="{{$query}}" />
+                        <input class="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-[#3a3a3a] rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-300 focus:border-blue-300 bg-white dark:bg-[#2d2d2d] text-gray-900 dark:text-[#f5f5f5]" 
+                               type="search" 
+                               name="query" 
+                               id="query" 
+                               placeholder="Faites votre recherche avec Fulgure" 
+                               value="{{$query}}">
                     </div>
                 </div>
             </div>

@@ -14,6 +14,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
         console.log(search);
     });
+
+    $("#submit_commentaire").on('click', function() {
+        const formData = {
+            'comment': $('#comment').val(),
+            '_token': $('input[name="_token"]').val()
+        }
+        console.log(formData)
+        $.ajax({
+            url: "/comment",
+            method: "POST",
+            data: formData,
+            success: function(reponse) {
+                if(reponse.status == "success") {
+                    $("#commentaire-modal").addClass('hidden').removeClass('flex')
+                }
+            }
+        })
+    })
 });
 
 // Fonction pour ouvrir la modal

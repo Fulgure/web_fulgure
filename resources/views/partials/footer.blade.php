@@ -24,9 +24,9 @@
     
         <!-- Right section -->
         <div>
-          <button class="text-gray-300 border border-gray-500 px-4 py-2 rounded hover:bg-gray-700">
-            Partager vos commentaires
-          </button>
+            <button class="text-gray-300 border border-gray-500 px-4 py-2 rounded hover:bg-gray-700" onclick="openModal('commentaire-modal')" type="button">
+                Partager vos commentaires
+            </button>
         </div>
     </div>
     @else

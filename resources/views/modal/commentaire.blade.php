@@ -12,20 +12,24 @@
         </div>
     
         <!-- Modal body -->
-        <div>
+        <div class="justify-center p-5">
             {{-- <div> 
-                <select name="" id=""></select>
-                <label for=""></label>
-            </div>--}}
+                <select id="amelioration" class="bg-white text-gray-900 dark:bg-[#2d2d2d] dark:text-[#f5f5f5]">
+                  <option value="null">Sélectionner un élément</option>
+                  <option value="home">Page d'acceuil</option>
+                  <option value="result">Page de resultat</option>
+                </select>
+                <label for="amelioration">Que pouvons nous améliore</label>
+            </div> --}}
             <div>
-                <textarea class="w-full p-4 border border-gray-200 rounded-lg" name="comment" id="comment" cols="30" rows="10" placeholder="Votre commentaire"></textarea>
+                <textarea class="w-full rounded-lg border border-gray-200 bg-white p-4 text-gray-900 dark:bg-[#2d2d2d] dark:text-[#f5f5f5]" name="comment" id="comment" cols="30" rows="10" placeholder="Votre commentaire"></textarea>
             </div>
         </div>
-    
+        @csrf
         <!-- Modal footer -->
         <div class="flex justify-end items-center border-t border-gray-200 px-6 py-4">
           <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg mr-2 hover:bg-gray-300" onclick="closeModal('commentaire-modal')">Annuler</button>
-          <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Confirmer</button>
+          <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700" id="submit_commentaire">Confirmer</button>
         </div>
       </div>
 </div>

@@ -10,7 +10,7 @@
             @foreach ($results as $result)
                 <div class="mb-4 p-4 border border-gray-300 rounded-lg">
                     <a href="{{ $result['url'] }}" target="_blank" class="text-blue-500 underline">{{ $result['name'] }}</a>
-                    <p class="text-gray-600 text-sm mt-2">{{ $result['snippet'] }}</p>
+                    <p class="text-gray-200 text-sm mt-2">{{ $result['snippet'] }}</p>
                 </div>
             @endforeach
         </div>
