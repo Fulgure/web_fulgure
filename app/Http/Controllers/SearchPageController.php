@@ -30,7 +30,6 @@ class SearchPageController extends Controller
                     'q' => $query,
                     'count' => 20,
                     'offset' => 0,
-                    'freshness' => 'Day',
                     'mkt' => 'fr-FR',
                     'safeSearch' => 'Strict',
                     'textDecorations' => 'false',

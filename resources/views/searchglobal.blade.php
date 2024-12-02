@@ -8,7 +8,7 @@
         <span>Nombre de résultats : {{ count($results) }}</span>
         <div class="mt-4">
             @foreach ($results as $result)
-                <div class="mb-4 p-4 border border-gray-300 rounded-lg">
+                <div class="mb-3 p-4">
                     <a href="{{ $result['url'] }}" target="_blank" class="text-blue-500 underline">{{ $result['name'] }}</a>
                     <p class="text-gray-200 text-sm mt-2">{{ $result['snippet'] }}</p>
                 </div>

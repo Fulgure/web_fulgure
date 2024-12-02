@@ -21,19 +21,19 @@
                 </div>
             </div>
             <div class="flex justify-evenly items-center mt-4 space-x-4 w-full">
-                <a class="flex flex-col items-center text-center text-gray-700 hover:text-blue-500" href="/search?q={{$query}}">
+                <a class="flex flex-col items-center text-center text-gray-300 hover:text-blue-500" href="/search?q={{$query}}">
                     <i class="bi bi-search text-lg"></i>
                     <span class="text-sm">Toutes</span>
                 </a>
-                <a class="flex flex-col items-center text-center text-gray-700 hover:text-blue-500" href="/search/actu?q={{$query}}">
+                <a class="flex flex-col items-center text-center text-gray-300 hover:text-blue-500" href="/search/actu?q={{$query}}">
                     <i class="bi bi-journal-text text-lg"></i>
                     <span class="text-sm">Actualités</span>
                 </a>
-                <a class="flex flex-col items-center text-center text-gray-700 hover:text-blue-500" href="/search/finance?q={{$query}}">
+                <a class="flex flex-col items-center text-center text-gray-300 hover:text-blue-500" href="/search/finance?q={{$query}}">
                     <i class="bi bi-journal-text text-lg"></i>
                     <span class="text-sm">Finance</span>
                 </a>
-                <a class="flex flex-col items-center text-center text-gray-700 hover:text-blue-500" href="/search/tech?q={{$query}}">
+                <a class="flex flex-col items-center text-center text-gray-300 hover:text-blue-500" href="/search/tech?q={{$query}}">
                     <i class="bi bi-journal-text text-lg"></i>
                     <span class="text-sm">Tech</span>
                 </a>

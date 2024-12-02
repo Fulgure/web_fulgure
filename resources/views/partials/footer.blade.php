@@ -15,7 +15,7 @@
             <button class="hover:underline">Services</button>
           </div>--}}
           <div class="group relative">
-            <button class="hover:underline">À propos de Fulgure</button>
+            <a class="hover:underline">À propos de Fulgure</a>
           </div>
         </div>
     
@@ -60,7 +60,7 @@
                             {{-- <li><a href="#" class="hover:underline">Better Web</a></li> 
                             <li><a href="#" class="hover:underline">Nous rejoindre</a></li>
                             <li><a href="#" class="hover:underline">Centre d'aide</a></li>--}}
-                            <li><a href="about.fulgure.fr/contact" class="hover:underline">Contact</a></li>
+                            <li><a href="https://about.fulgure.fr/contact" class="hover:underline">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -69,11 +69,11 @@
                 <div>
                     <h3 class="font-semibold text-white">Suivez-nous</h3>
                     <div class="mt-2 flex space-x-4">
-                        <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i> Instagram</a>
-                        <a href="#" class="hover:text-white"><i class="fab fa-twitter"></i> Twitter</a>
-                        <a href="#" class="hover:text-white"><i class="fab fa-tiktok"></i> TikTok</a>
-                        <a href="https://www.linkedin.com/company/fulgure/" class="hover:text-white"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                        <a href="#" class="hover:text-white"><i class="fab fab-discord"></i> Discord</a>
+                        {{-- <a href="#" class="hover:text-white"><i class="fa fa-instagram"></i> Instagram</a> --}}
+                        <a href="#" class="hover:text-white"><i class="bi bi-twitter-x"></i></a>
+                        {{-- <a href="#" class="hover:text-white"><i class="fa fa-tiktok"></i> TikTok</a> --}}
+                        <a href="https://www.linkedin.com/company/fulgure/" class="hover:text-white"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://discord.gg/Xw6E4nWhAx" class="hover:text-white"><i class="bi bi-discord"></i></a>
                     </div>
                 </div>
             </div>
@@ -82,11 +82,11 @@
 
             <div class="flex flex-col md:flex-row justify-between text-sm">
                 <div class="space-y-2 md:space-y-0 md:flex md:space-x-4">
-                    <a href="#" class="hover:underline">Politique de confidentialité</a>
-                    <a href="#" class="hover:underline">Conditions d'utilisation</a>
-                    <a href="#" class="hover:underline">Mentions légales</a>
+                    <a href="https://about.fulgure.fr/legal/confidentialite" target="_blank" class="hover:underline">Politique de confidentialité</a>
+                    <a href="https://about.fulgure.fr/legal/utilisation" target="_blank" class="hover:underline">Conditions d'utilisation</a>
+                    <a href="https://about.fulgure.fr/legal/mentions-legales" target="_blank" class="hover:underline">Mentions légales</a>
                     {{-- <a href="#" class="hover:underline">Classement</a> --}}
-                    <a href="#" class="hover:underline">Gestion des cookies</a>
+                    <a href="#" class="hover:underline" onclick="cookieModal(event)">Gestion des cookies</a>
                 </div>
 
                 <p class="mt-4 md:mt-0">© 2024 Fulgure. Tous droits réservés.</p>

@@ -33,6 +33,7 @@
     <meta name="twitter:image" content="/asset/img/logo.png">
 
     {{-- <link rel="stylesheet" href="/asset/lib/bootstrap.css"> --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="bg-light dark:bg-[#1e1e1e] dark:text-[#f5f5f5]">
     @include('partials.header')

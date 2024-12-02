@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
             'comment': $('#comment').val(),
             '_token': $('input[name="_token"]').val()
         }
-        console.log(formData)
         $.ajax({
             url: "/comment",
             method: "POST",
@@ -50,5 +49,11 @@ window.closeModal = function(modalId) {
       modal.classList.add("hidden");
       modal.classList.remove("flex");
     }
+}
+
+window.cookieModal = function(event) {
+    event.preventDefault();
+
+    window.openModal('cookie');
 }
   
