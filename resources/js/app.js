@@ -47,7 +47,7 @@ window.closeModal = function(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
       modal.classList.add("hidden");
-      modal.classList.remove("flex");
+      modal.classList.remove("flex fixed");
     }
 }
 
@@ -55,5 +55,42 @@ window.cookieModal = function(event) {
     event.preventDefault();
 
     window.openModal('cookie');
+}
+
+window.rejectAllCookies = function() {
+    $.ajax({
+        url: "/cookie-management",
+        method: "POST",
+        data: {
+            _token: $('input[name="_token"]').val(),
+            publicite: "refuse",
+            personalisation: "refuse",
+        }
+    })
+}
+
+window.acceptAllCookies = function() {
+    $.ajax({
+        url: "/cookie-management",
+        method: "POST",
+        data: {
+            _token: $('input[name="_token"]').val(),
+            publicite: "accepte",
+            personalisation: "accepte",
+        }
+    })
+}
+
+window.saveCookies = function() {
+
+    $.ajax({
+        url: "/cookie-management",
+        method: "POST",
+        data: {
+            _token: $('input[name="_token"]').val(),
+            publicite: $('input[name="publicite"]:checked').val(),
+            personalisation: $('input[name="personalisation"]:checked').val(),
+        }
+    })
 }
   

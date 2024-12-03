@@ -1,4 +1,5 @@
 @include('modal.commentaire')
+@include('modal.cookie')
 <footer class="mt-5 py-8">
     @if (isset($slimHeader) && $slimHeader == true)
     <!-- Footer simple et léger si possible une petit ligne de 50px max de hauter -->
