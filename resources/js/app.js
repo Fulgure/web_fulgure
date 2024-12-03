@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const cookies = document.cookie.split('; ').reduce((acc, cookie) => {
+        const [name, value] = cookie.split('=');
+        acc[name] = value;
+        return acc;
+    }, {});
+
+    if(cookies.cookieConsent != "accepted") {
+        window.openModal('cookie');
+    }
+
     const query = document.querySelector('#query');
 
     query.addEventListener('keyup', function(event) {
@@ -47,7 +57,7 @@ window.closeModal = function(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
       modal.classList.add("hidden");
-      modal.classList.remove("flex fixed");
+      modal.classList.remove("flex");
     }
 }
 
@@ -63,8 +73,15 @@ window.rejectAllCookies = function() {
         method: "POST",
         data: {
             _token: $('input[name="_token"]').val(),
-            publicite: "refuse",
-            personalisation: "refuse",
+            marketing: "declined",
+            personalisation: "declined",
+        },
+        success: function(reponse) {
+            document.cookie = "cookieConsent=accepted; path=/";
+            window.closeModal('cookie');
+        },
+        error: function(error) {
+            console.log(error);
         }
     })
 }
@@ -75,8 +92,15 @@ window.acceptAllCookies = function() {
         method: "POST",
         data: {
             _token: $('input[name="_token"]').val(),
-            publicite: "accepte",
-            personalisation: "accepte",
+            marketing: "accepted",
+            personalisation: "accepted",
+        },
+        success: function(reponse) {
+            document.cookie = "cookieConsent=accepted; path=/";
+            window.closeModal('cookie');
+        },
+        error: function(error) {
+            console.log(error);
         }
     })
 }
@@ -88,8 +112,15 @@ window.saveCookies = function() {
         method: "POST",
         data: {
             _token: $('input[name="_token"]').val(),
-            publicite: $('input[name="publicite"]:checked').val(),
+            marketing: $('input[name="publicite"]:checked').val(),
             personalisation: $('input[name="personalisation"]:checked').val(),
+        },
+        success: function(reponse) {
+            document.cookie = "cookieConsent=accepted; path=/";
+            window.closeModal('cookie');
+        },
+        error: function(error) {
+            console.log(error);
         }
     })
 }

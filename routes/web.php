@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CommentaireController;
+use App\Http\Controllers\CookieController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\SearchPageController;
 use Illuminate\Support\Facades\Route;
@@ -13,3 +14,6 @@ Route::get('/search/tech', [ SearchPageController::class, 'search_tech' ]);
 
 # Gestion du commentaire
 Route::post('/comment', [ CommentaireController::class, 'comment_post']);
+
+# Gestion des cookies
+Route::post('/cookie-management', [ CookieController::class, 'index_cookie' ]);

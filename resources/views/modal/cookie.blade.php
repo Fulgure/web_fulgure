@@ -59,13 +59,13 @@
                     <span class="text-gray-800 dark:text-[#f5f5f5] font-medium">+ Personnalisation</span>
                     <div class="flex items-center space-x-4">
                         <label class="flex items-center space-x-2">
-                            <input type="radio" name="personnalisation" value="declined" class="hidden peer">
+                            <input type="radio" name="personalisation" value="declined" class="hidden peer">
                             <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-lg cursor-pointer peer-checked:bg-red-600 peer-checked:text-white hover:bg-gray-300">
                                 Refuser
                             </span>
                         </label>
                         <label class="flex items--center space-x-2">
-                            <input type="radio" name="personnalisation" value="accepted" class="hidden peer" checked>
+                            <input type="radio" name="personalisation" value="accepted" class="hidden peer" checked>
                             <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-lg cursor-pointer peer-checked:bg-green-600 peer-checked:text-white hover:bg-gray-300" aria-checked="true">
                                 Accepter
                             </span>
