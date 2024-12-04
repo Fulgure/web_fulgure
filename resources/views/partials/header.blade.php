@@ -20,7 +20,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-evenly items-center mt-4 space-x-4 w-full">
+            {{-- <div class="flex justify-evenly items-center mt-4 space-x-4 w-full"> 
                 <a class="flex flex-col items-center text-center text-gray-300 hover:text-blue-500" href="/search?q={{$query}}">
                     <i class="bi bi-search text-lg"></i>
                     <span class="text-sm">Toutes</span>
@@ -37,7 +37,7 @@
                     <i class="bi bi-journal-text text-lg"></i>
                     <span class="text-sm">Tech</span>
                 </a>
-            </div>
+            </div>--}}
         </div>
     </div>
 </header>
