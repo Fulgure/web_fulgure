@@ -1,11 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const cookies = document.cookie.split('; ').reduce((acc, cookie) => {
-        const [name, value] = cookie.split('=');
-        acc[name] = value;
-        return acc;
-    }, {});
-
-    if(cookies.cookieConsent != "accepted") {
+    if(getCookie("cookieConsent") != "accepted") {
         window.openModal('cookie');
     }
 
@@ -77,7 +71,7 @@ window.rejectAllCookies = function() {
             personalisation: "declined",
         },
         success: function(reponse) {
-            document.cookie = "cookieConsent=accepted; path=/";
+            setCookie('cookieConsent', 'accepted', 365);
             window.closeModal('cookie');
         },
         error: function(error) {
@@ -96,7 +90,7 @@ window.acceptAllCookies = function() {
             personalisation: "accepted",
         },
         success: function(reponse) {
-            document.cookie = "cookieConsent=accepted; path=/";
+            setCookie('cookieConsent', 'accepted', 365);
             window.closeModal('cookie');
         },
         error: function(error) {
@@ -116,12 +110,30 @@ window.saveCookies = function() {
             personalisation: $('input[name="personalisation"]:checked').val(),
         },
         success: function(reponse) {
-            document.cookie = "cookieConsent=accepted; path=/";
+            setCookie('cookieConsent', 'accepted', 365);
             window.closeModal('cookie');
         },
         error: function(error) {
             console.log(error);
         }
     })
+}
+
+function setCookie(name, value, days) {
+    let date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Convertir les jours en millisecondes
+    let expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + "; " + expires + "; path=/";
+}
+
+function getCookie(name) {
+    let cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i].trim();
+        if (cookie.startsWith(name + "=")) {
+            return cookie.substring((name + "=").length, cookie.length);
+        }
+    }
+    return null; // Retourne null si le cookie n'est pas trouvé
 }
   
