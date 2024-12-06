@@ -15,21 +15,21 @@
 
     <!-- SEO -->
     <meta name="robots" content="index, follow"> 
-    <meta name="description" content="Nxtransfert envoyez jusqu'a 50 Go - Gratuit et sans inscrition - Gardez vos transfert pendant 30 jours">
+    <meta name="description" content="Un moteur pour vous, pas pour vos données.">
 
-    <meta property="og:title" content="{{ trim($__env->yieldContent('title')) ? trim($__env->yieldContent('title')) . ' - ' : '' }}Nxtransfert">
-    <meta property="og:description" content="Nxtransfert envoyez jusqu'a 50 Go - Gratuit et sans inscrition - Gardez vos transfert pendant 30 jours">
+    <meta property="og:title" content="{{ trim($__env->yieldContent('title')) ? trim($__env->yieldContent('title')) . ' - ' : '' }}Fulgure">
+    <meta property="og:description" content="Un moteur pour vous, pas pour vos données.">
     <meta property="og:image" content="/asset/img/logo.png">
     <meta property="og:url" content="{{ request()->url() }}">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Nxtransfert">
-    <meta name="og:autor" content="Nxtransfert">
+    <meta property="og:site_name" content="Fulgure">
+    <meta name="og:autor" content="Fulgure">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@NexHostFR">
-    <meta name="twitter:creator" content="@NexHostFR">
-    <meta name="twitter:title" content="@yield('title', "") - Nxtransfert">
-    <meta name="twitter:description" content="Nxtransfert envoyez jusqu'a 50 Go - Gratuit et sans inscrition - Gardez vos transfert pendant 30 jours">
+    <meta name="twitter:site" content="@Fulgure">
+    <meta name="twitter:creator" content="@Fulgure">
+    <meta name="twitter:title" content="{{ trim($__env->yieldContent('title')) ? trim($__env->yieldContent('title')) . ' - ' : '' }}Fulgure">
+    <meta name="twitter:description" content="Un moteur pour vous, pas pour vos données.">
     <meta name="twitter:image" content="/asset/img/logo.png">
 
     {{-- <link rel="stylesheet" href="/asset/lib/bootstrap.css"> --}}
