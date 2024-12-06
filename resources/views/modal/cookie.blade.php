@@ -1,6 +1,6 @@
 <!-- Modal Cookie -->
 <div id="cookie" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-    <div class="bg-light dark:bg-[#1e1e1e] dark:text-[#f5f5f5] rounded-lg border border-gray-200 shadow-lg w-1/3">
+    <div class="bg-light dark:bg-[#1e1e1e] dark:text-[#f5f5f5] rounded-lg border border-gray-200 shadow-lg  md:w-1/3 w-full">
         <!-- Modal header -->
         <div class="flex justify-between items-center border-b border-gray-200 px-6 py-4">
           <h3 class="text-lg font-semibold">Paramètres des cookies</h3>
@@ -20,7 +20,7 @@
             <!-- Options de cookies -->
             <div class="mt-4">
                 <div class="flex justify-between items-center py-2 border-b border-gray-200">
-                    <span class="text-gray-800 dark:text-[#f5f5f5] font-medium">+ Analyses</span>
+                    <span class="text-gray-800 dark:text-[#f5f5f5] font-medium">Analyses</span>
                     <div class="flex items-center space-x-4">
                         <label class="flex items-center space-x-2">
                             <input type="radio" name="analyses" value="declined" class="hidden peer" disabled>
@@ -38,7 +38,7 @@
                 </div>                
 
                 <div class="flex justify-between items-center py-2 border-b border-gray-200">
-                    <span class="text-gray-800 dark:text-[#f5f5f5] font-medium">+ Publicité</span>
+                    <span class="text-gray-800 dark:text-[#f5f5f5] font-medium">Publicité</span>
                     <div class="flex items-center space-x-4">
                         <label class="flex items-center space-x-2">
                             <input type="radio" name="publicite" value="declined" class="hidden peer">
@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="flex justify-between items-center py-2 border-b border-gray-200">
-                    <span class="text-gray-800 dark:text-[#f5f5f5] font-medium">+ Personnalisation</span>
+                    <span class="text-gray-800 dark:text-[#f5f5f5] font-medium">Personnalisation</span>
                     <div class="flex items-center space-x-4">
                         <label class="flex items-center space-x-2">
                             <input type="radio" name="personalisation" value="declined" class="hidden peer">

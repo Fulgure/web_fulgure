@@ -3,9 +3,9 @@
 <footer class="mt-5 py-8">
     @if (isset($slimHeader) && $slimHeader == true)
     <!-- Footer simple et léger si possible une petit ligne de 50px max de hauter -->
-    <div class="container mx-auto flex justify-between items-center">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <!-- Left section -->
-        <div class="flex space-x-4">
+        <div class="flex space-x-4 mb-5 md:mb-0">
           {{-- <div class="group relative"> 
             <button class="hover:underline">Résultats</button>
           </div>--}}
@@ -21,7 +21,7 @@
         </div>
     
         <!-- Center section -->
-        <div>© 2024 Fulgure. Tous droits réservés.</div>
+        <div class="mb-5 md:mb-0">© 2024 Fulgure. Tous droits réservés.</div>
     
         <!-- Right section -->
         <div>

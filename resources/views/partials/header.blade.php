@@ -6,7 +6,7 @@
                 <a class="flex justify-center items-center w-24" href="/">
                     <img src="/asset/img/logo.png" alt="Logo" class="max-w-full">
                 </a>
-                <div class="flex-grow input-group p-1">
+                <div class="flex-grow input-group p-1 w-full">
                     <div class="relative w-full">
                         <span class="absolute inset-y-0 left-0 flex items-center pl-3">
                             <i class="bi bi-search text-gray-400"></i>
