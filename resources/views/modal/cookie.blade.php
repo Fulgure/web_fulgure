@@ -14,8 +14,8 @@
         <!-- Modal body -->
         <div class="justify-center p-5">
             <p class="text-sm text-gray-600 dark:text-[#f5f5f5]">
-                Nous et nos partenaires sélectionnés traitons des données personnelles en lien avec votre navigation sur nos contenus pour les finalités listées ci-dessous. Pour en savoir plus, consultez notre <a href="#" class="text-blue-600 hover:underline">politique de confidentialité</a>.
-            </p>
+                Nous et nos partenaires traitons vos données personnelles de manière responsable pour améliorer votre expérience de navigation. Découvrez les détails dans notre <a href="https://about.fulgure.fr/legal/confidentialite" class="text-blue-600 hover:underline" target="_blank">politique de confidentialité</a>.
+            </p>            
 
             <!-- Options de cookies -->
             <div class="mt-4">
