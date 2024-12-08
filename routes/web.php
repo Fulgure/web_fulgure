@@ -17,3 +17,7 @@ Route::post('/comment', [ CommentaireController::class, 'comment_post']);
 
 # Gestion des cookies
 Route::post('/cookie-management', [ CookieController::class, 'index_cookie' ]);
+
+# Information
+Route::get("/robots.txt", [view("robots")]);
+Route::get("/sitemap.xml", [view("sitemap")]);

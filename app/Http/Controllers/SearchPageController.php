@@ -53,7 +53,13 @@ class SearchPageController extends Controller
     }
 
     public function search_finance(Request $request)
-    {
-        return response()->json($request->query());
+    {   
+        $data = [
+            "result" => [],
+            "primaryChart" => [], // Graphique principal de la recherche
+            "similarChart" => [], // Graphique similaire a la recherhce ( comme de d'autre marque ou entreprise )
+            "similarSearch" => []
+        ];
+        return response()->json($data);
     }
 }
