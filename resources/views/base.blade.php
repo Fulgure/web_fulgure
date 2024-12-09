@@ -34,6 +34,8 @@
 
     {{-- <link rel="stylesheet" href="/asset/lib/bootstrap.css"> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="43b9c148-384f-4e70-bc0f-1c4257ac3524"></script>
 </head>
 <body class="bg-light dark:bg-[#1e1e1e] dark:text-[#f5f5f5]">
     @include('partials.header')

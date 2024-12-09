@@ -19,9 +19,6 @@ Route::post('/comment', [ CommentaireController::class, 'comment_post']);
 Route::post('/cookie-management', [ CookieController::class, 'index_cookie' ]);
 
 # Information
-Route::get('/robots.txt', function () {
-    return response()->view('robots')->header('Content-Type', 'text/plain');
-});
 Route::get("/sitemap.xml", function() {
     return response()->view('sitemap')->header('Content-Type', 'text/xml');
 });
