@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    if(getCookie("cookieConsent") != "accepted") {
-        window.openModal('cookie');
-    }
+    // if(getCookie("cookieConsent") != "accepted") {
+    //     window.openModal('cookie');
+    // }
 
     const query = document.querySelector('#query');
 
@@ -15,26 +15,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     query.addEventListener('input', function(event) {
         let search = query.value;
-
-        console.log(search);
     });
 
-    $("#submit_commentaire").on('click', function() {
-        const formData = {
-            'comment': $('#comment').val(),
-            '_token': $('input[name="_token"]').val()
-        }
-        $.ajax({
-            url: "/comment",
-            method: "POST",
-            data: formData,
-            success: function(reponse) {
-                if(reponse.status == "success") {
-                    $("#commentaire-modal").addClass('hidden').removeClass('flex')
-                }
-            }
-        })
-    })
+    // $("#submit_commentaire").on('click', function() {
+    //     const formData = {
+    //         'comment': $('#comment').val(),
+    //         '_token': $('input[name="_token"]').val()
+    //     }
+    //     $.ajax({
+    //         url: "/comment",
+    //         method: "POST",
+    //         data: formData,
+    //         success: function(reponse) {
+    //             if(reponse.status == "success") {
+    //                 $("#commentaire-modal").addClass('hidden').removeClass('flex')
+    //             }
+    //         }
+    //     })
+    // })
 });
 
 // Fonction pour ouvrir la modal
