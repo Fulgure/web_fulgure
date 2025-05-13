@@ -12,39 +12,25 @@ class SearchPageController extends Controller
     public function search_global(Request $request)
     {   
         // Utilisation de 'base_uri' au lieu de 'base_url'
-        $client = new Client([
-            'base_uri' => env("URL_API"),
-            'verify' => false,
-        ]);
-        $apiKey = "ab1e06567fc1440b837be7cc675235b9";
-        $query = $request->query('q');
+        $ch = curl_init(env("URL_API").'?'.http_build_query([
+            'q' => $request->query('q')
+        ]));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Pour récupérer le contenu
+        curl_setopt($ch, CURLOPT_TIMEOUT, 10);          // Timeout de 10 secondes
         try {
-            // Requête GET avec l'URL complète
-            $response = $client->request('GET', 'search', [
-                'headers' => [
-                    'Content-Type' => 'application/json',
-                ],
-                'query' => [
-                    'q' => $query,
-                    'count' => 20,
-                    'offset' => 0,
-                    'mkt' => 'fr-FR',
-                    'safeSearch' => 'Strict',
-                    'textDecorations' => 'false',
-                    'textFormat' => 'Raw',
-                    'responseFilter' => 'WebPages',
-                ],
-            ]);
-
-            $data = json_decode($response->getBody(), true);
-            // Affichage des résultats pour déboguer
+            $reponse = curl_exec($ch);
+            if (curl_errno($ch)) {
+                echo "Erreur cURL : " . curl_error($ch);
+            } else {
+                $data = json_decode($reponse, true);
+            }
         } catch (Exception $e) {
             var_dump($e->getMessage());
         }
-
+        curl_close($ch);
         return view('searchglobal', [
             'slimHeader' => true,
-            'query' => $query,
+            'query' => $request->query('q'),
             'results' => $data
         ]);
     }
